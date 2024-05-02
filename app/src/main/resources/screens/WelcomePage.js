@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Button from "../components/Button";  // Assuming Button is a generalized component
