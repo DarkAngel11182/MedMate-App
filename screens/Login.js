@@ -1,7 +1,6 @@
-import React from "react";
 import { StyleSheet, View, Text, Pressable, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Border, Color, FontFamily, FontSize } from "../GlobalStyles";
+import { BorderRadius, Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const Login = () => {
   const navigation = useNavigation();
@@ -25,7 +24,7 @@ const Login = () => {
 };
 
 const TopBar = ({ navigation }) => (
-  <View style={styles.topBar}>
+  <View style={styles.topbarscreen}>
     <Pressable onPress={() => navigation.navigate("WelcomePage")}>
       <Image style={styles.icon} source={require("../assets/back-icon.png")} />
     </Pressable>
@@ -59,7 +58,7 @@ const styles = StyleSheet.create({
   },
   inputField: {
     backgroundColor: Color.colorDimgray,
-    borderRadius: Border.br_8xs,
+borderRadius: BorderRadius?.br_8xs || 'default_value',
     padding: 10,
     marginHorizontal: 15,
     marginVertical: 10,

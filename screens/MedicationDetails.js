@@ -1,6 +1,5 @@
 // MedicationDetails.js
 
-import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import InfoBox from './InfoBox';  // Ensure path is correct based on your directory structure
 

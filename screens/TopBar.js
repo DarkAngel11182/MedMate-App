@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Color, FontFamily, FontSize } from '../GlobalStyles';
 
@@ -8,7 +7,7 @@ const TopBar = () => (
             style={styles.backIcon}
             source={require("../assets/back-icon.png")}
         />
-        <Text style={styles.title}>MedMate</Text>
+        <Text style={styles.title}> MedMate </Text>
     </View>
 );
 

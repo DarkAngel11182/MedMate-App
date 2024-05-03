@@ -1,7 +1,6 @@
-import React from "react";
 import { StyleSheet, View, Text, Pressable, Image, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Color, Border, FontSize, FontFamily } from "../GlobalStyles";
+import { Color, BorderRadius, FontSize, FontFamily } from "../GlobalStyles";
 
 const CreateAccount = () => {
   const navigation = useNavigation();
@@ -82,13 +81,13 @@ const styles = StyleSheet.create({
     height: 40,
     borderWidth: 1,
     borderColor: Color.colorGray_300,
-    borderRadius: Border.br_8xs,
+    borderRadius: BorderRadius?.br_8xs || 'default_value',
     padding: 10,
     fontSize: FontSize.size_base,
   },
   button: {
     backgroundColor: Color.colorSkyblue_300,
-    borderRadius: Border.br_8xs,
+    borderRadius: BorderRadius?.br_8xs || 'default_value',
     padding: 10,
     alignItems: 'center',
     marginTop: 10,

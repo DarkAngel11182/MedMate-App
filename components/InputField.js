@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, StyleSheet } from 'react-native';
+import { TextInput, StyleSheet, View, Text } from 'react-native';
 
 const InputField = ({ label, placeholder, onChangeText, value, secureTextEntry, style, error }) => (
     <View style={styles.container}>

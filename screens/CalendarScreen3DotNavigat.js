@@ -1,4 +1,3 @@
-import React from "react";
 import { StyleSheet, View, Text, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FontSize, FontFamily, Color, Padding, Border } from "../GlobalStyles";

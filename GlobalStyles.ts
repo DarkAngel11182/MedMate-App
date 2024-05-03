@@ -1,3 +1,5 @@
+import { StyleSheet } from 'react-native';
+
 // Define a strict type for font families using 'as const' to ensure immutability and strictness
 export const FontFamily = {
   interBold: "Inter-Bold",
@@ -97,3 +99,25 @@ export const commonBoxShadow: BoxShadowStyle = {
   shadowColor: "rgba(0, 0, 0, 0.25)",
   elevation: 3,
 };
+
+// Styles
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Color.LightCyan,
+  },
+  text: {
+    fontSize: FontSize.Base,
+    color: Color.Black,
+    fontFamily: FontFamily.interRegular,
+  },
+  button: {
+    padding: Padding.Medium,
+    backgroundColor: Color.SkyBlue100,
+borderRadius: BorderRadius?.br_8xs || 'default_value'
+  },
+});
+
+export default styles;

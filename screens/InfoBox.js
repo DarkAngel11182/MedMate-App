@@ -1,5 +1,4 @@
 // InfoBox.js
-import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Color, FontSize, FontFamily } from '../GlobalStyles';
 

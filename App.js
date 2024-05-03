@@ -1,66 +1,26 @@
-import * as React from "react";
-import { StyleSheet, View, Text, Pressable, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { FontFamily, Color, FontSize, Border } from "./GlobalStyles";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import WelcomePage from './screens/WelcomePage';
+import LoginScreen from './screens/Login';
+import CreateAccountScreen from './screens/CreateAccount';
+import ForgotAccountScreen from './screens/ForgotAccount';
+import { StyleSheet, View, Text, Pressable, Image } from 'react-native';
 
-const WelcomePage = () => {
-  const navigation = useNavigation();
+const Stack = createStackNavigator();
 
+const App = () => {
   return (
-    <View style={styles.welcomePage}>
-      {/* Simplify your View structures if possible */}
-      <Image
-        style={styles.logoPlaceholderIcon}
-        source={require("../assets/logo-placeholder.png")}
-      />
-      <Pressable
-        style={[styles.basicBox, styles.basicLayout]}
-        onPress={() => navigation.navigate("Login")}
-      >
-        <Text style={styles.textHere}>Log in</Text>
-      </Pressable>
-      <Pressable
-        style={[styles.basicBox1, styles.basicLayout]}
-        onPress={() => navigation.navigate("CreateAccount")}
-      >
-        <Text style={styles.textHere}>
-          Create Account
-        </Text>
-      </Pressable>
-      <Text style={styles.forgotAccount}>
-        Forgot account
-      </Text>
-      {/* Additional elements */}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Screen name="Welcome" component={WelcomePage} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="CreateAccount" component={CreateAccountScreen} /> 
+        <Stack.Screen name="ForgotAccount" component={ForgotAccountScreen} /> 
+
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-};
+}
 
-const styles = StyleSheet.create({
-  // Consolidate your styles here
-  welcomePage: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: Color.colorLightcyan,
-  },
-  logoPlaceholderIcon: {
-    width: 200,
-    height: 200,
-    marginBottom: 20,
-  },
-  basicBox: {
-    backgroundColor: Color.colorGray_300,
-    padding: 10,
-    borderRadius: Border.br_8xs,
-  },
-  textHere: {
-    fontFamily: FontFamily.interRegular,
-    fontSize: FontSize.size_base,
-    color: Color.colorBlack,
-  },
-  forgotAccount: {
-    marginTop: 15,
-  }
-});
-
-export default WelcomePage;
+export default App;

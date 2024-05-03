@@ -30,7 +30,7 @@ const Alerts = () => {
         <Image
           style={styles.backIcon}
           contentFit="cover"
-          source={require("../assets/back-icon2.png")}
+          source={require("../assets/back-icon.png")}
         />
       </View>
       <Pressable style={styles.basicBox} onPress={handlePress}>
