@@ -12,8 +12,8 @@ const Login = () => {
         style={styles.logoPlaceholderIcon}
         source={require("../assets/logo-placeholder.png")}
       />
-      <InputField label="E-mail" />
-      <InputField label="Password" />
+      <FormField label="E-mail" placeholder="Enter your email" />
+      <FormField label="Password" placeholder="Enter your password" />
       <Pressable onPress={() => navigation.navigate("PatientSideMain")} style={styles.loginButton}>
         <Text style={styles.loginButtonText}>LOGIN →</Text>
       </Pressable>
@@ -22,6 +22,18 @@ const Login = () => {
     </View>
   );
 };
+
+const FormField = ({ label, placeholder, secureTextEntry = false }) => (
+  <View style={styles.inputContainer}>
+    <Text style={styles.label}>{label}</Text>
+    <TextInput
+      style={styles.input}
+      placeholder={placeholder}
+      secureTextEntry={secureTextEntry}
+      placeholderTextColor={Color.colorGray_100}
+    />
+  </View>
+);
 
 const TopBar = ({ navigation }) => (
   <View style={styles.topbarscreen}>
@@ -55,6 +67,22 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     width: 184,
     height: 176,
+  },
+  inputContainer: {
+    marginBottom: 15,
+  },
+    label: {
+    fontSize: FontSize.size_base,
+    fontFamily: FontFamily.interMedium,
+    color: Color.colorBlack,
+  },
+  input: {
+    height: 40,
+    borderWidth: 1,
+    borderColor: Color.colorGray_300,
+    borderRadius: BorderRadius?.br_8xs || 'default_value',
+    padding: 10,
+    fontSize: FontSize.size_base,
   },
   inputField: {
     backgroundColor: Color.colorDimgray,
