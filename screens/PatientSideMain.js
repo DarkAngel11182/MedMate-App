@@ -1,5 +1,5 @@
 import { ScrollView, StyleSheet, View } from 'react-native';
-import TopBar from './TopBar';  // Assuming the file is located in the components folder
+import TopBar from './TopBar'
 import CalendarWidget from './CalendarWidget';
 import { useNavigation } from '@react-navigation/native';
 import { Color } from '../GlobalStyles';

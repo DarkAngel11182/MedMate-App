@@ -14,7 +14,10 @@ const Login = () => {
       />
       <FormField label="E-mail" placeholder="Enter your email" />
       <FormField label="Password" placeholder="Enter your password" />
-      <Pressable onPress={() => navigation.navigate("PatientSideMain")} style={styles.loginButton}>
+      <Pressable
+        style={[styles.basicBox, styles.basicLayout]}
+        onPress={() => navigation.navigate("PatientSideMain")} style={styles.loginButton}
+      >
         <Text style={styles.loginButtonText}>LOGIN →</Text>
       </Pressable>
       <Text style={styles.forgotPassword}>Forgot Password</Text>
@@ -86,7 +89,7 @@ const styles = StyleSheet.create({
   },
   inputField: {
     backgroundColor: Color.colorDimgray,
-borderRadius: BorderRadius?.br_8xs || 'default_value',
+    borderRadius: BorderRadius?.br_8xs || 'default_value',
     padding: 10,
     marginHorizontal: 15,
     marginVertical: 10,

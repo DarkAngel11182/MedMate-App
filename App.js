@@ -5,6 +5,7 @@ import WelcomePage from './screens/WelcomePage';
 import LoginScreen from './screens/Login';
 import CreateAccountScreen from './screens/CreateAccount';
 import ForgotAccountScreen from './screens/ForgotAccount';
+import PatientSideMain from './screens/PatientSideMain';
 import { StyleSheet, View, Text, Pressable, Image } from 'react-native';
 
 const Stack = createStackNavigator();
@@ -15,9 +16,9 @@ const App = () => {
       <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen name="Welcome" component={WelcomePage} />
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="CreateAccount" component={CreateAccountScreen} /> 
-        <Stack.Screen name="ForgotAccount" component={ForgotAccountScreen} /> 
-
+        <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
+        <Stack.Screen name="ForgotAccount" component={ForgotAccountScreen} />
+        <Stack.Screen name="PatientSideMain" component={PatientSideMain} />
       </Stack.Navigator>
     </NavigationContainer>
   );
