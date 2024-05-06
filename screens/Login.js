@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Pressable, Image } from "react-native";
+import { StyleSheet, View, Text, Pressable, Image, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { BorderRadius, Color, FontFamily, FontSize } from "../GlobalStyles";
 
