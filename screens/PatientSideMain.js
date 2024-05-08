@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Pressable, Text } from 'react-native';
 import TopBar from './TopBar'
-import CalendarWidget from './CalendarWidget';
+import CalendarWidget from '../components/CalendarWidget';
 import { useNavigation } from '@react-navigation/native';
 import { Color } from '../GlobalStyles';
 
