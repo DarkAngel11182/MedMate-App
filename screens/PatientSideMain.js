@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, Pressable, Text } from 'react-native';
 import TopBar from './TopBar'
 import CalendarWidget from './CalendarWidget';
 import { useNavigation } from '@react-navigation/native';
@@ -11,6 +11,11 @@ const PatientSideMain = () => {
         <ScrollView style={styles.patientSideMain}>
             <TopBar />
             <CalendarWidget onNavigate={() => navigation.navigate("CalendarScreen")} />
+            <Pressable
+              onPress={() => navigation.navigate("UpcomingEventsList")}
+            >
+              <Text>See all upcoming</Text>
+	    </Pressable>
             {/* Additional components like UpcomingEventsList can be added here */}
         </ScrollView>
     );

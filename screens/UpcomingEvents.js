@@ -1,5 +1,6 @@
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import EventTimer from './EventTimer';  // Assume this is a new component
+// ^ if this is a component why is it saved under screens?
 import { useNavigation } from '@react-navigation/native';
 import { Color, FontSize, FontFamily } from '../GlobalStyles';
 
