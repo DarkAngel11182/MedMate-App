@@ -15,7 +15,10 @@ const PatientSideMain = () => {
         <ScrollView style={styles.patientSideMain}>
             <TopBar />
             <CalendarWidget onNavigate={() => navigation.navigate("CalendarScreen")} />
-	    <EventCo />
+	    <EventCo
+              titlInp={{contnr: 'Take', subcomp:'In', evnt: 'Coldkiller X'}}
+              subcompInp={exampleSubcomponent} // Used for inputting subcomponents (timer, status, etc...) later
+	    />
             <Pressable
               onPress={() => navigation.navigate("UpcomingEventsList")}
             >
@@ -25,6 +28,8 @@ const PatientSideMain = () => {
         </ScrollView>
     );
 };
+
+const exampleSubcomponent = <View style={{flex: 1, backgroundColor: "#00967E", marginLeft: 8, marginRight: 8}}></View>; // For testing subcomponent input
 
 const styles = StyleSheet.create({
     patientSideMain: {
